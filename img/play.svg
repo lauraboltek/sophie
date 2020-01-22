@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>3D4CBC04-55EC-4C32-8F7F-93EDC417C8D2</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="80" cy="80" r="45"></circle>
+        <filter x="-83.3%" y="-83.3%" width="266.7%" height="266.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="25" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sophie-r1b" transform="translate(-863.000000, -414.000000)" fill-rule="nonzero">
+            <g id="Home">
+                <g id="Icon" transform="translate(863.000000, 414.000000)">
+                    <circle id="Oval" fill="#FFFFFF" opacity="0.3" cx="80" cy="80" r="80"></circle>
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Play" transform="translate(60.000000, 64.000000)" fill="#544A49">
+                        <path d="M8.04605005,5.0508911 L26.8510983,23.8559394 C27.2416226,24.2464637 27.2416226,24.8796287 26.8510983,25.270153 C26.680453,25.4407983 26.4538538,25.5439769 26.2131019,25.5606552 L6.0083507,26.9603581 C5.45738645,26.9985266 4.97979994,26.5828236 4.94163138,26.0318593 C4.93844342,25.9858409 4.93844342,25.9396571 4.94163138,25.8936387 L6.34133424,5.68888759 C6.3795028,5.13792334 6.85708931,4.72222029 7.40805356,4.76038885 C7.64880547,4.77706716 7.87540473,4.88024578 8.04605005,5.0508911 Z" id="Rectangle-4" transform="translate(15.950992, 15.950998) rotate(-135.000000) translate(-15.950992, -15.950998) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -61,3 +61,18 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+
+var scrollPosition = 0;
+$(window).on('scroll', function() {
+	var currScrollPosition = $(this).scrollTop(),
+		toTop = $('a.to-top'),
+
+	scrollPosition = currScrollPosition;
+
+	if(scrollPosition > 400) {
+		toTop.addClass('active');
+	} else {
+		toTop.removeClass('active');
+	}
+});

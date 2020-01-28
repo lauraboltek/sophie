@@ -46,6 +46,9 @@ body {
 .icon-next {
   content: "\e908";
 }
+.arrow-top {
+  content: "\e90a";
+}
 h2 {
   font-family: "Rochester";
   font-size: 64px;
@@ -81,6 +84,7 @@ h3 {
   left: 80px;
   height: 289px;
   width: 220px;
+  transition: all 0.3s;
 }
 .sticky {
   position: fixed;
@@ -95,6 +99,9 @@ h3 {
 }
 .sticky .logo {
   background: url(img/fixed-logo.jpg) no-repeat;
+  width: 110px;
+  height: 70px;
+  transition: all 0.3s;
 }
 .nav {
   font-size: 18px;
@@ -117,8 +124,8 @@ h3 {
   align-items: center;
   justify-content: center;
 }
-a:active,
-a:hover {
+.nav a:active,
+.nav a:hover {
   width: auto;
   min-width: 60px;
   height: 70px;
@@ -142,16 +149,17 @@ a:hover {
   height: 1100px;
   width: 100%;
   background-image: url(img/babybg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
+  background-size: cover;
 }
 .title-container {
   position: absolute;
-  top: 219px;
-  left: 607px;
-  right: 607px;
-  bottom: 753px;
-  width: 706px;
-  height: 128px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 150px;
 }
 .title-container h2 {
   font-family: 'Rochester', sans-serif;
@@ -192,7 +200,7 @@ a:hover {
   font-weight: bold;
   line-height: 4;
   text-align: right;
-  text-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 .about {
   width: 100%;
@@ -240,8 +248,8 @@ a:hover {
 .senses-bg {
   width: auto;
   height: 1762px;
-  background-image: url(img/sensesBG.jpg);
-  background-repeat: no-repeat;
+  background: url(img/left.png) left no-repeat, url(img/right.png) right no-repeat;
+  background-color: #f9f8fa;
   text-align: center;
   position: relative;
   padding-top: 73px;
@@ -256,6 +264,7 @@ a:hover {
   line-height: 25px;
   text-align: center;
   padding-bottom: 40px;
+  position: relative;
 }
 .item-detail {
   width: 260px;
@@ -368,7 +377,8 @@ a:hover {
   border: 3px solid #FFF;
   position: absolute;
   bottom: 60px;
-  left: 25%;
+  left: 50%;
+  transform: translate(-50%);
 }
 .row2 .col1 {
   background: #BEA590;
@@ -416,8 +426,11 @@ a:hover {
 .slick-disabled {
   display: none;
 }
+.site-wrapper {
+  overflow: hidden;
+}
 .col2 {
-  width: calc(100% - 390px);
+  width: calc(100% - 380px);
 }
 .slick-track {
   height: 100%;
@@ -425,7 +438,6 @@ a:hover {
 .product {
   border: 1px solid #ccc;
   position: relative;
-  margin-left: -1px;
   height: 100%;
 }
 .product-overlay {
@@ -439,9 +451,39 @@ a:hover {
   color: #fff;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
 }
-.product-overlay .product-title {
+.product-number {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+}
+.product-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.product-price {
+  font-size: 18px;
+  line-height: 21px;
+}
+.row1 .product-overlay .product-title {
   color: #CAD200;
+}
+.row1 .product-number {
+  color: #CAD200;
+}
+.row2 .product-overlay .product-title {
+  color: #BEA590;
+}
+.row2 .product-number {
+  color: #BEA590;
+}
+.row3 .product-overlay .product-title {
+  color: #B50156;
+}
+.row3 .product-number {
+  color: #B50156;
 }
 .overlay-btn {
   height: 57px;
@@ -584,7 +626,6 @@ a:hover {
   background-image: url(img/world.jpg);
   background-repeat: no-repeat;
   background-position: top right;
-  min-height: 860px;
   padding: 92px 0 10px;
   padding-left: 80px;
 }
@@ -592,6 +633,9 @@ a:hover {
   width: auto;
   height: auto;
   text-align: left;
+  position: relative;
+}
+.location .subheadline-light {
   position: absolute;
 }
 .location h2 {
@@ -615,6 +659,8 @@ a:hover {
   background-color: #544a49;
   background-image: url(img/footerbg.jpg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .footer-wrapper {
   width: auto;
@@ -687,11 +733,485 @@ a:hover {
   line-height: 21px;
   text-align: right;
   position: relative;
-  right: 50px;
+  right: 150px;
   bottom: 112px;
   text-decoration: none;
 }
 .copyright a {
   text-decoration: none;
   color: #fff;
+}
+.marker:hover {
+  text-decoration: underline;
+}
+.social-networks a:hover {
+  background: rgba(84, 74, 73, 0.6);
+  transition: all 0.3s;
+}
+.to-top {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 100%;
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  text-align: center;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+}
+.to-top:after {
+  content: "\e90a";
+  font: 13px/60px icomoon;
+  color: #847876;
+}
+.to-top:hover {
+  box-shadow: none;
+}
+.faq img {
+  height: 100%;
+}
+.slick-dots {
+  visibility: hidden;
+}
+@media only screen and (max-width: 1440px) {
+  .page-intro {
+    background-position: center;
+    background-size: cover;
+  }
+  .logo {
+    height: 230px;
+    left: 50px;
+  }
+  .info {
+    padding-left: 50px;
+  }
+  .location {
+    padding-top: 50px;
+    background-size: 800px;
+  }
+  .locations {
+    width: 1000px;
+    padding-top: 80px;
+  }
+  .to-top {
+    right: 25px;
+  }
+  .copyright {
+    right: 110px;
+    bottom: 109px;
+  }
+  .sophie-img {
+    height: 700px;
+    padding-left: 150px;
+  }
+  .location-cnt {
+    padding-right: 5px;
+  }
+  .overlay-btn {
+    left: 35px;
+  }
+  .slick-prev,
+  .slick-next {
+    height: 75px;
+    width: 75px;
+  }
+  .overlay-btn {
+    left: 131px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  h2 {
+    font-size: 40px;
+    line-height: 51px;
+  }
+  .page-intro {
+    height: 567px;
+  }
+  .nav {
+    font-size: 14px;
+    letter-spacing: -0.21px;
+    line-height: 16px;
+  }
+  .nav a {
+    margin: 0 15px;
+  }
+  .logo {
+    width: 120px;
+    height: 157px;
+    left: 30px;
+  }
+  .title-container {
+    padding-top: 60px;
+  }
+  .title-container h2 {
+    font-size: 40px;
+    line-height: 40px;
+    text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    padding-bottom: 20px;
+  }
+  .story-intro {
+    font-size: 18px;
+    letter-spacing: -0.27px;
+    line-height: 25px;
+    width: 570px;
+  }
+  .about {
+    padding-top: 45px;
+  }
+  .info h2 {
+    padding-top: 0;
+  }
+  .info {
+    padding-left: 60px;
+    width: 570px;
+  }
+  .sophie-img {
+    padding-left: 70px;
+    height: 560px;
+    position: relative;
+    top: 30px;
+  }
+  .senses-bg {
+    padding-top: 25px;
+    height: 1610px;
+  }
+  .subheadline-light {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.25px;
+    line-height: 21px;
+  }
+  .item-detail {
+    width: 1024px;
+  }
+  .item-detail .babyimg {
+    width: 67%;
+  }
+  .item-info {
+    padding: 34px 106px 0;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.23px;
+    line-height: 19px;
+  }
+  .item-detail-box {
+    width: 160px;
+  }
+  .natural {
+    width: 130px;
+    height: 130px;
+  }
+  .item-detail-4 {
+    right: 75px;
+  }
+  .col1 {
+    width: 200px;
+    height: 225px;
+  }
+  .row4 .col1 {
+    width: 200px;
+  }
+  .row4 .col1 img {
+    width: 138px;
+  }
+  .col2 {
+    width: calc(100% - 200px);
+  }
+  .collection-logo {
+    width: 93px;
+    height: 55px;
+  }
+  .btn {
+    min-width: 160px;
+    height: 47px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    bottom: 30px;
+    left: 101px;
+  }
+  .slick-prev,
+  .slick-next {
+    width: 50px;
+    height: 50px;
+  }
+  .slick-prev:before {
+    font: 20px/22px "icomoon";
+  }
+  .slick-next:before {
+    font: 20px/22px "icomoon";
+  }
+  .product-number {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .product-title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .product-price {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .faq-content {
+    padding: 40px 30px 50px;
+  }
+  .faq-item-title {
+    font-size: 16px;
+    letter-spacing: -0.15px;
+    line-height: 19px;
+  }
+  .location {
+    padding-left: 30px;
+    padding-top: 45px;
+    background-size: 470px;
+  }
+  .locations {
+    width: 600px;
+  }
+  .location p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+  }
+  .location-cnt {
+    width: 200px;
+  }
+  .footer {
+    height: 100px;
+  }
+  .footer-logo {
+    background-size: 110px;
+    top: 30px;
+    left: -40px;
+  }
+  .contact {
+    left: 19%;
+    top: -46px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .social-networks {
+    top: -45px;
+    position: relative;
+    left: -80px;
+  }
+  .social-networks a {
+    width: 50px;
+    height: 50px;
+  }
+  .social-networks .facebook:before {
+    font: 25px/53px "icomoon";
+    left: 19px;
+  }
+  .social-networks .instagram:before {
+    font: 25px/56px "icomoon";
+    left: 13px;
+  }
+  .social-networks .youtube:before {
+    font: 25px/54px "icomoon";
+    left: 14px;
+  }
+  .to-top {
+    bottom: 20px;
+  }
+  .copyright {
+    bottom: 145px;
+    font-size: 12px;
+    line-height: 19px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 50px;
+    justify-content: flex-end;
+    padding-right: 40px;
+  }
+  .nav {
+    font-size: 13px;
+    letter-spacing: -0.8px;
+    line-height: 15px;
+    text-align: right;
+  }
+  .logo {
+    width: 85px;
+    height: 112px;
+    padding-left: 20px;
+  }
+  .sticky .logo img {
+    height: 50px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 38px;
+    text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+  .page-intro h2 {
+    width: 435px;
+  }
+  .intro-link {
+    font-size: 18px;
+    line-height: 21px;
+    text-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  }
+  .about h2 {
+    line-height: 46px;
+  }
+  .story-intro {
+    font-size: 16px;
+    letter-spacing: -0.24px;
+    line-height: 22px;
+  }
+  .info p {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.34px;
+    line-height: 22px;
+    width: 430px;
+  }
+  .info {
+    padding-left: 25px;
+  }
+  .sophie-img {
+    padding-left: 10px;
+    position: relative;
+    right: 100px;
+    top: 100px;
+    height: 476px;
+  }
+  .about {
+    padding-bottom: 30px;
+  }
+  .senses-bg h2 {
+    line-height: 46px;
+  }
+  .subheadline-light {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.22px;
+    line-height: 19px;
+  }
+  .item-detail-box img {
+    width: 47px;
+    height: 41px;
+  }
+  .item-detail {
+    font-size: 16px;
+    width: 768px;
+  }
+  h3 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .senses-bg p {
+    font-size: 14px;
+    letter-spacing: -0.21px;
+    line-height: 16px;
+  }
+  .item-info {
+    padding: 30px 20px 0;
+  }
+  .subheadline-light p {
+    font-size: 16px;
+  }
+  .col1 {
+    width: 156px;
+    height: auto;
+  }
+  .col2 {
+    width: calc(100% - 156px);
+  }
+  .row4 .col1 {
+    width: 156px;
+    height: 110px;
+  }
+  .row4 .col1 img {
+    width: 112px;
+    position: relative;
+    bottom: 20px;
+  }
+  .btn {
+    min-width: 126px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 14px;
+    bottom: 15px;
+  }
+  .col1 .btn {
+    width: 124px;
+    font-size: 10px;
+    line-height: 14px;
+    left: 80px;
+  }
+  .product-number {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .product-title {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .product-price {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .slick-next,
+  .slick-prev {
+    width: 40px;
+    height: 40px;
+  }
+  .slick-prev:before {
+    left: 32%;
+    font: 18px/13px "icomoon";
+  }
+  .slick-next:before {
+    font: 18px/13px "icomoon";
+    right: 30%;
+  }
+  .faq {
+    min-height: 500px;
+  }
+  .location {
+    background-size: 300px;
+  }
+  .location .subheadline-light {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .locations {
+    padding-top: 50px;
+  }
+  .locations h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .footer-logo {
+    width: 127px;
+    height: 64px;
+    right: 65px;
+    left: auto;
+  }
+  .contact {
+    font-size: 13px;
+    line-height: 17px;
+    left: 22%;
+  }
+  .copyright {
+    font-size: 12px;
+    line-height: 19;
+  }
+  .social-networks a {
+    top: -52px;
+    left: 51%;
+  }
+  .to-top:after {
+    position: relative;
+    bottom: 84px;
+  }
 }

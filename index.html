@@ -20,19 +20,20 @@
 			<a class="logo" href="https://sophielagirafe.hr/" id="logo"></a>
 			<a class="btn-toggle-nav" href="javascript:void(0);"><span></span>Izbornik</a>
 			<ul class="nav">
-				<li><a href="#home"></a></li>
-				<li><a href="#about">Upoznajte Sophie</a></li>
-				<li><a href="#osjetila">5 osjetila</a></li>
-				<li><a href="#proizvodi">Proizvodi</a></li>
-				<li><a href="#web-shop">Web shop</a></li>
-				<li><a href="#pitanja">Česta pitanja</a></li>
-				<li><a href="#gdje-kupiti">Gdje kupiti</a></li>
-				<li><a href="#kontakt">Kontakt</a></li>
+				<li><a data-page="home" href="#home"></a></li>
+				<li><a data-page="about" href="#about">Upoznajte Sophie</a></li>
+				<li><a data-page="osjetila" href="#osjetila">5 osjetila</a></li>
+				<li><a data-page="proizvodi" href="#proizvodi">Proizvodi</a></li>
+				<li><a data-page="web-shop" href="#web-shop">Web shop</a></li>
+				<li><a data-page="pitanja" href="#pitanja">Česta pitanja</a></li>
+				<li><a data-page="gdje-kupiti" href="#gdje-kupiti">Gdje kupiti</a></li>
+				<li><a data-page="kontakt" href="#kontakt">Kontakt</a></li>
+				<div class="bubble"></div>
 			</ul>
 		</header>
 	</div>
 	
-	<div class="page-intro">
+	<div data-index = "0" class="home page-intro">
 		<div class="title-container">
 			<h2>Jedinstvena igracka za najmanje od 100% prirodnog materijala</h2>
 			<div class="video">
@@ -46,7 +47,7 @@
 		</div>
 	</div>
 
-	<div class="about">
+	<div data-index="1" class="about">
 		<div class="wrapper-about">
 			<div class="info" id="about">
 				<h2>Meet Sophie</h2>
@@ -66,7 +67,7 @@
 		</div>
 	</div>
 
-	<div class="senses-bg" id="osjetila">
+	<div data-index="2" class="osjetila senses-bg" id="osjetila">
 		<h2>Stimulating the five senses</h2>
 		<p class="subheadline-light">Sophie la girafe Baby’s first and favourite toy, stimulating each senses.</p>
 		<div class="item-detail">
@@ -126,7 +127,7 @@
 		</div>
 	</div>
 
-	<div class="slider-section" id="proizvodi">
+	<div data-index="3" class="proizvodi web-shop slider-section" id="proizvodi">
 		<h2  id="web-shop">Kolekcije</h2>
 		<div class="subheadline-light">
 			<p>Izaberite proizvod za svoje najdraže</p>
@@ -569,7 +570,7 @@
 	</div>
 
 	<div class="faq">
-		<div>
+		<div data-index="4" class="pitanja">
 			<img src="img/faqimg.jpg" alt="" width="960" height="865">
 		</div>
 		<div class="faq-content" id="pitanja">
@@ -647,7 +648,7 @@
 		</div>
 	</div>
 
-	<div class="location" id="gdje-kupiti">
+	<div data-index="5" class="gdje-kupiti location" id="gdje-kupiti">
 		<div class="location-wrapper">
 			<h2>Gdje kupiti Sophie</h2>
 			<p class="subheadline-light">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
@@ -710,7 +711,7 @@
 		</div>
 	</div>
 
-	<footer class="footer" id="kontakt">
+	<footer data-index="6" class="kontakt footer" id="kontakt">
 		<div class="footer-wrapper">
 			<a class="footer-logo" href="https://sophielagirafe.hr/"></a>
 		</div>

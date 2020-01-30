@@ -74,6 +74,13 @@ h3 {
   justify-content: center;
   position: relative;
 }
+.bubble {
+  position: absolute;
+  z-index: -2;
+  background: #544a49;
+  transition: all 0.3s ease;
+  transform: scale(2);
+}
 .wrapper {
   width: auto;
 }

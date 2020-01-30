@@ -10,8 +10,8 @@ $(function() {
 		{
 			breakpoint: 1024,
 			settings: {
-			slidesToShow: 3,
-			slidesToScroll: 3,
+			slidesToShow: 4,
+			slidesToScroll: 4,
 			infinite: true,
 			dots: true
 			}
@@ -37,10 +37,14 @@ $(function() {
 		]
 	});
 
+	var body = $('body');
 	 
 	 $('.faq-item-title').on('click', function() {
 		 $(this).parent().toggleClass('active');
 	 });
+	 $('.nav a').on('click', function() {
+        body.removeClass('active-nav');
+     });
 
 	 $('.fancybox-media').fancybox({
 		openEffect  : 'none',

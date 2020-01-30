@@ -1,7 +1,7 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 img{max-width: 100%; height: auto;}
 
-@fonti: "icomon";
+@fonti: "icomoon";
 @brown: #544a49;
 @yellow: #CAD200;
 @font2: "Rochester";
@@ -135,6 +135,16 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.nav li:first-child a {
+    width: 45px;
+    height: 50px;
+    margin: 0 3px;
+    &:before {
+        content: "\e909";
+        font: 14px/39px @fonti;
+    }
 }
 
 .nav a:active, .nav a:hover {
@@ -1479,7 +1489,7 @@ h3 {
     .btn-toggle-nav{
         display: block;
         position: absolute; 
-        top: 10px; 
+        top: 23px; 
         right: 15px;
         width: 20px;
         height: 14px;
@@ -1490,6 +1500,99 @@ h3 {
         font-size: 0;
         z-index: 101;
     }
+    .active-nav .header {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        background: #847876;
+        display: block;
+        overflow: auto;
+    }
+    .active-nav .nav {
+        margin-top: 50px;
+        line-height: 37px;
+    }
+    .active-nav .nav li{
+        border: 1pt solid #eee;
+        height: 50px;
+        &:first-child {
+            display: none;
+        }
+    }
+
+    .toggle-nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }
+
+    .btn-toggle-nav {
+        display: block;
+        width: 23px;
+        height: 3px;
+        background: #847876;
+        position: absolute;
+    }
+
+    .btn-toggle-nav span:before,
+    .btn-toggle-nav span:after {
+        .pseudo;
+        width: 100%;
+        height: 3px;
+        background: #847876;
+    }
+
+    .btn-toggle-nav span:before{
+        bottom: 6px;
+    }
+    .btn-toggle-nav span:after{
+        top: 6px;
+    }
+    .active-nav .header:after {
+       content: "";
+       display: block;
+       width: 100%;
+       height: 50px;
+       position: absolute;
+       top: 0;
+       left: 0;
+       background: #fff;
+    }
+ 
+
+    .active-nav .social-networks {
+        position: relative;
+        display: block;
+        color: #fff;
+        position: fixed;
+        z-index: 1111;
+        display: flex;
+        margin-top: 30px;
+        top: 470px;
+        left: 25px;
+    }
+
+    .active-nav .contact {
+        position: fixed;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        z-index: 1111;
+        left: 154px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
     .nav {
         font-size: 16px;
         line-height: 22px;
@@ -1510,6 +1613,7 @@ h3 {
         background-size: contain;
         width: 100px;
         height: 50px;
+        z-index: 101;
     }
 
     .page-intro {
@@ -1722,9 +1826,31 @@ h3 {
             left: 15px;
             right: 15px;
             width: auto;
-            border-color: @brown;
+            border-color: #000;
             transform: none;
         }
+    }
+    .row1 .btn{
+        border-color: @yellow;
+        color: @yellow;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .row2 .btn{
+        border-color: #BEA590;
+        color: #BEA590;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .row3 .btn{
+        border-color: #B50156;
+        color: #B50156;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+    .row4 .col2 {
+        height: 100px;
     }
 
     .collection-logo {
@@ -1803,7 +1929,7 @@ h3 {
     .footer {
         height: 190px;
         width: auto;
-        background: url(img/footerbg.jpg) right no-repeat;
+        background: url(img/sfooterbg.png) right no-repeat #847876;
     }
     .footer-logo {
         width: 150px;
@@ -1837,5 +1963,100 @@ h3 {
     .to-top:after{
         bottom: 0;
     }
-   
+}
+
+@media only screen and (max-width: 375px) {
+    .title-container h2 {
+        left: 50px;
+    }
+
+    .info p {
+        width: 336px;
+    }
+
+    .item-detail-4 img{
+        width: 145px;
+        height: 100px;
+        right: 36px;
+        top: 10px;
+    }
+
+    .social-networks{
+        right: 163px;
+    }
+
+    .footer p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .contact {
+        font-size: 11px;
+    }
+
+    .active-nav {
+        .social-networks{
+            left: 0;
+        }
+        .contact{
+            left: 130px;
+        }
+    }
+}
+@media only screen and (max-width: 375px){
+    .title-container h2 {
+        left: 25px;
+    }
+    .intro-link{
+        font-size: 17px;
+    }
+    .info p{
+        width: 280px;
+    }
+    .sophie-img {
+        left: 65px;
+    }
+    .item-detail-4{
+        left: 148px;
+        width: 120px;
+    }
+    .senses-bg h2{
+        padding-bottom: 10px;
+    }
+    .senses-bg { 
+        p  {
+        font-size: 14px;
+        }
+        h3 {
+        font-size: 23px;
+        }
+    }
+    .location{
+        padding-left: 10px;
+    }
+    .contact{
+        left: 200px;
+    }
+    .social-networks{
+        right: 133px;
+    }
+    .social-networks a{
+        width: 46px;
+        height: 46px;
+    }
+    .social-networks .facebook:before {
+        font: 25px/49px "icomoon";
+        left: 17px;
+    }
+    .social-networks .instagram:before {
+        font: 25px/50px "icomoon";
+        left: 11px;
+    }
+    .social-networks .youtube:before {
+        font: 25px/50px "icomoon";
+        left: 13px;
+    }
+    .collection-logo img{
+        height: 50px;
+    }
 }
